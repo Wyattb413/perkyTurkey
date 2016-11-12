@@ -1,0 +1,79 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="File Stack Image Uploader">
+        <meta name="author" content="Wyatt Barnes">
+
+        <title>Perky Turkey</title>
+
+        <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="/css/perkyTurkey.css">
+    </head>
+
+    <body>
+        <script type="text/javascript" src="//api.filestackapi.com/filestack.js"></script>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 turkeyContainer">
+                    <img src="/img/perkyTurkey.png" class="perkyturkey" id="perkyturkey">
+                    <!-- <img id="userUpload" src="#" style="display: none;"> -->
+                </div>
+                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 text-center textContainer">
+                    <h1>Get Into The Holiday Spirit With FileStack!</h1>
+                    <button class="btn btn-default" type="button" onclick="becomingOne(event);">
+                        <h4>Become One With The Turkey</h4>
+                    </button>
+                </div>
+            </div>
+            <div class="row">
+                <footer class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center fileStackFooter">
+                    <a href="http://filestack.com/" class="footerAnchor">
+                    <h1>Get Started With <span class="sr-only">FileStack</span> <span><img src="img/fileStackLogo.svg"></span> Today!</h1>
+                    </a>
+                </footer>
+            </div>
+        </div>
+        <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
+        <script type="text/javascript">
+            var filestack_key = "AOSLAoEN9RPSqlUCWpQ3dz";
+
+            function becomingOne(e) {
+                e.preventDefault();
+                filepicker.setKey(filestack_key);
+                filepicker.pick(
+                    {
+                        minetype: 'image/*',
+                        container: 'modal',
+                        services: ['CONVERT', 'ALFRESCO','INSTAGRAM','BOX','SKYDRIVE','CLOUDDRIVE','IMAGE_SEARCH','CLOUDAPP','COMPUTER','DROPBOX','URL','FACEBOOK','GOOGLE_DRIVE','FLICKR','EVERNOTE','GMAIL','PICASA','FTP','CUSTOMSOURCE','IMGUR','WEBCAM','WEBDAV'],
+                        conversions: ['crop', 'rotate', 'filter'],
+                        cropDim: ['190', '200'],
+                        cropForce: true,
+                    },
+                    function(Blob) {
+                        var filestackUrl = Blob.url;
+                        var filestackUrlArray = filestackUrl.split("/");
+                        var filestackHandler = filestackUrlArray[3];
+                        // var croppedImg = 'https://process.filestackapi.com/' + filestack_key + '/crop_faces=width:190/circle/' + filestackHandler;
+                        // var croppedImg = 'https://process.filestackapi.com/' + filestack_key + '/crop_faces=width:190/circle/' + filestackUrl;
+                        // var croppedImgArray = croppedImg.split("/");
+                         // console.log(croppedImgArray);
+                        // var croppedImgHandler = croppedImgArray[9];
+                        // var waterMarkedImg = 'https://process.filestackapi.com/' + filestack_key + '/' + 'watermark=file:' + croppedImgHandler + '/https://cdn.filestackcontent.com/POj1jBZCTWe3TqkkpIlV'
+                        var waterMarkedImg = 'https://process.filestackapi.com/' + filestack_key + '/watermark=file:' + filestackHandler + '/https://cdn.filestackcontent.com/POj1jBZCTWe3TqkkpIlV'
+                        document.getElementById('perkyturkey').src=waterMarkedImg;
+                    },
+                    function(FPError){
+
+                    }
+                );
+            };
+        </script>
+    </body>
+
+</html>

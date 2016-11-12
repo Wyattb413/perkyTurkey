@@ -1,0 +1,12 @@
+{
+	"version": 3,
+	"file": "../scss/perkyturkey.css",
+	"sources": [
+		"../scss/perkyturkey.scss"
+	],
+	"sourcesContent": [
+		"body {\n    background-color: #F7DDA8;\n}\n/*Image Upload Container*/\n    .turkeyContainer {\n        z-index: 2;\n        border-radius: 25px;\n        background-image: url(\"/img/woodBackground2.jpeg\");\n        background-size: cover;\n        background-position: center;\n        background-repeat: no-repeat;\n        background-color: white;\n    }\n\n    .perkyturkey {\n        // width: 100%;\n        // height: auto;\n    }\n\n    .textContainer {\n        // background-color: #CA6924;\n    }\n\n    .footerAnchor {\n        color: white;\n        &:hover {\n            color: white;\n            text-decoration: none;\n        }\n    }\n\n    .fileStackFooter {\n        position: absolute;\n        bottom: 0;\n        background-color: #2E3B44;\n    }\n"
+	],
+	"mappings": ";AAAA,AAAA,IAAI,CAAC;EACD,gBAAgB,EAAE,OAAQ;CAC7B;;AACD,0BAA0B;;AACtB,AAAA,gBAAgB,CAAC;EACb,OAAO,EAAE,CAAE;EACX,aAAa,EAAE,IAAK;EACpB,gBAAgB,EAAE,gCAAG;EACrB,eAAe,EAAE,KAAM;EACvB,mBAAmB,EAAE,MAAO;EAC5B,iBAAiB,EAAE,SAAU;EAC7B,gBAAgB,EAAE,KAAM;CAC3B;;;AAWD,AAAA,aAAa,CAAC;EACV,KAAK,EAAE,KAAM;CAKhB;;;AAND,AAAA,aAAa,AAER,MAAM,CAAC;EACJ,KAAK,EAAE,KAAM;EACb,eAAe,EAAE,IAAK;CACzB;;;AAGL,AAAA,gBAAgB,CAAC;EACb,QAAQ,EAAE,QAAS;EACnB,MAAM,EAAE,CAAE;EACV,gBAAgB,EAAE,OAAQ;CAC7B",
+	"names": []
+}

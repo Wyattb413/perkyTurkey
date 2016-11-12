@@ -1,0 +1,36 @@
+/* line 1, /Users/Wyatt/vagrant-lamp/sites/perkyturkey.dev/public/scss/perkyturkey.scss */
+body {
+  background-color: #F7DDA8;
+}
+
+/*Image Upload Container*/
+/* line 5, /Users/Wyatt/vagrant-lamp/sites/perkyturkey.dev/public/scss/perkyturkey.scss */
+.turkeyContainer {
+  z-index: 2;
+  border-radius: 25px;
+  background-image: url("/img/woodBackground2.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: white;
+}
+
+/* line 24, /Users/Wyatt/vagrant-lamp/sites/perkyturkey.dev/public/scss/perkyturkey.scss */
+.footerAnchor {
+  color: white;
+}
+
+/* line 26, /Users/Wyatt/vagrant-lamp/sites/perkyturkey.dev/public/scss/perkyturkey.scss */
+.footerAnchor:hover {
+  color: white;
+  text-decoration: none;
+}
+
+/* line 32, /Users/Wyatt/vagrant-lamp/sites/perkyturkey.dev/public/scss/perkyturkey.scss */
+.fileStackFooter {
+  position: absolute;
+  bottom: 0;
+  background-color: #2E3B44;
+}
+
+/*# sourceMappingURL=../css/perkyturkey.map */
